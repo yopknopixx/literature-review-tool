@@ -90,7 +90,9 @@ def get_context(context_queries):
     return metaphor.get_contents(context_ids)
 
 
-def preprocess_and_insert_papers(paper_filenames, progress_bar, converter, preprocessor, retriever, document_store):
+def preprocess_and_insert_papers(
+    paper_filenames, progress_bar, converter, preprocessor, retriever, document_store
+):
     titles = []
     document_store.delete_documents()
     for idx, docname in enumerate(paper_filenames):

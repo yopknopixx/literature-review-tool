@@ -134,14 +134,19 @@ class GenerateLiteratureSurvey(components.Page):
         st.write(
             "Found",
             len(paper_files),
-            'papers.',
+            "papers.",
         )
         if st.button("Start Generating", type="primary"):
             st.write("Preprocessing papers...")
             preprocess_progress = st.progress(0, text="Preprocessing papers")
             preprocess_progress.progress(0)
             titles = preprocess_and_insert_papers(
-                paper_files, preprocess_progress, document_converter, preprocessor, retriever, document_store
+                paper_files,
+                preprocess_progress,
+                document_converter,
+                preprocessor,
+                retriever,
+                document_store,
             )
             preprocess_progress.progress(1.0)
             st.write("Generating paper reviews...")

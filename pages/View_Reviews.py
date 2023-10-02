@@ -10,7 +10,9 @@ else:
         key="paper_review_select",
     )
     if "paper_review_select" in st.session_state:
-        review = st.session_state["paper_reviews"][st.session_state["paper_review_select"]]
+        review = st.session_state["paper_reviews"][
+            st.session_state["paper_review_select"]
+        ]
         st.title(review["Title"])
         with st.container():
             for author in review["Authors"]:
@@ -37,6 +39,3 @@ else:
             st.markdown(f"Future Work: {review['Summary']['Future Work']}")
         with st.container():
             st.markdown(f"Conclusion: {review['Summary']['Conclusion']}")
-
-        
-
