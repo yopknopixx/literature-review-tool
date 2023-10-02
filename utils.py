@@ -9,7 +9,7 @@ from prompts import *
 from generation import *
 
 
-metaphor = Metaphor("12b927b1-366e-4522-8856-6985308d1d3d")
+metaphor = Metaphor("")
 
 paper_domains = [
     "scholar.google.com",

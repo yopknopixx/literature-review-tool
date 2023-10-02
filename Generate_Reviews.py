@@ -8,8 +8,8 @@ from metaphor_python import Metaphor
 from utils import *
 
 
-openai.api_key = "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"
-metaphor = Metaphor("12b927b1-366e-4522-8856-6985308d1d3d")
+openai.api_key = ""
+metaphor = Metaphor("")
 
 
 st.title("Literature Survey Tool")
@@ -125,7 +125,7 @@ class GenerateLiteratureSurvey(components.Page):
             document_store=document_store,
             batch_size=128,
             embedding_model="text-embedding-ada-002",
-            api_key="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",
+            api_key="",
             max_seq_len=1024,
         )
         st.header("Generate Literature Survey")
